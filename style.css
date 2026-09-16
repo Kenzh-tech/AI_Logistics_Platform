@@ -1,0 +1,116 @@
+/* --- ОСНОВНОЙ ФОН И ШРИФТЫ --- */
+.stApp {
+    background-color: #0d1117 !important; /* Глубокий темно-синий/черный */
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 212, 255, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(110, 0, 255, 0.1) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(0, 255, 128, 0.05) 0px, transparent 50%) !important;
+    color: #e6f1ff !important;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* --- ЭФФЕКТ МАТОВОГО СТЕКЛА (GLASSMORPHISM) --- */
+/* Применяется к основным блокам и карточкам */
+div[data-testid="stVerticalBlock"] > div {
+    background: rgba(22, 27, 34, 0.6) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 22px !important;
+    margin-bottom: 15px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* --- ЗАГОЛОВКИ --- */
+h1, h2, h3 {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px !important;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.4) !important;
+}
+
+/* --- КНОПКИ (iOS Blue Style) --- */
+.stButton>button {
+    border-radius: 12px !important;
+    background: rgba(0, 122, 255, 0.15) !important;
+    color: #00d4ff !important;
+    border: 1px solid rgba(0, 122, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    padding: 10px 20px !important;
+}
+
+.stButton>button:hover {
+    background: rgba(0, 122, 255, 0.3) !important;
+    border-color: #00d4ff !important;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5) !important;
+    transform: translateY(-2px);
+}
+
+/* --- ПОЛЯ ВВОДА (Input Fields) --- */
+input, select, textarea {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    padding: 8px !important;
+}
+
+input:focus {
+    border-color: #00d4ff !important;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2) !important;
+}
+
+/* --- КАРТОЧКИ МЕТРИК (KPI) --- */
+[data-testid="stMetric"] {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 15px !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #00d4ff !important;
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+}
+
+/* --- ТАБЫ (Вкладки) --- */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 10px !important;
+    background-color: transparent !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 45px !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 10px 10px 0 0 !important;
+    color: #8b949e !important;
+    border: none !important;
+    padding: 0 20px !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: rgba(0, 122, 255, 0.2) !important;
+    color: #ffffff !important;
+    border-bottom: 2px solid #00d4ff !important;
+}
+
+/* --- ТАБЛИЦЫ --- */
+.stDataFrame {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+/* Скроллбары (для аккуратности) */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
